@@ -205,4 +205,33 @@ body{
     top:10px;
     font-size:28px;
     cursor:pointer;
+}@media (max-width: 768px) {
+
+    .products{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+        padding: 15px;
+    }
+
+    .product{
+        width: 100%;
+    }
+
+    .product img{
+        height: 100px;
+    }
+
+    .product h3{
+        font-size: 12px;
+    }
+
+    .product p{
+        font-size: 12px;
+    }
+
+    .cart-btn{
+        font-size: 11px;
+        padding: 6px;
+    }
 }
