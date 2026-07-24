@@ -7,19 +7,20 @@
 
 body{
     background:#f5f5f5;
+    overflow-x:hidden;
 }
 
 /* Navbar */
-
 .navbar{
     display:flex;
     justify-content:space-between;
     align-items:center;
     background:#ff4d6d;
     padding:15px 30px;
-    color:white;
+    color:#fff;
     position:sticky;
     top:0;
+    z-index:1000;
 }
 
 .logo{
@@ -38,10 +39,7 @@ body{
 .navbar ul{
     display:flex;
     list-style:none;
-}
-
-.navbar ul li{
-    margin-left:20px;
+    gap:20px;
 }
 
 .navbar ul li a{
@@ -51,12 +49,7 @@ body{
     font-weight:bold;
 }
 
-.navbar ul li a:hover{
-    color:yellow;
-}
-
 /* Hero */
-
 .hero{
     height:450px;
     background:linear-gradient(to right,#ff4d6d,#ff9a8b);
@@ -87,18 +80,13 @@ body{
     cursor:pointer;
 }
 
-.hero button:hover{
-    background:yellow;
-}
-
 /* Products */
-
 .products{
     display:flex;
-    justify-content:center;
-    gap:25px;
     flex-wrap:wrap;
-    padding:50px 20px;
+    justify-content:center;
+    gap:20px;
+    padding:40px 20px;
 }
 
 .product{
@@ -108,11 +96,6 @@ body{
     overflow:hidden;
     text-align:center;
     box-shadow:0 5px 15px rgba(0,0,0,.2);
-    transition:.3s;
-}
-
-.product:hover{
-    transform:translateY(-10px);
 }
 
 .product img{
@@ -122,12 +105,12 @@ body{
 }
 
 .product h3{
-    margin:15px 0;
+    margin:15px;
 }
 
 .product p{
-    color:#ff4d6d;
-    font-size:20px;
+    color:#ff2d6f;
+    font-size:22px;
     font-weight:bold;
 }
 
@@ -136,22 +119,17 @@ body{
     padding:10px 20px;
     border:none;
     border-radius:20px;
-    background:#ff4d6d;
+    background:#ff2d6f;
     color:white;
     cursor:pointer;
 }
 
-.cart-btn:hover{
-    background:#e6004c;
-}/* Order Popup */
+/* Popup */
 .popup{
     display:none;
     position:fixed;
-    top:0;
-    left:0;
-    width:100%;
-    height:100%;
-    background:rgba(0,0,0,0.6);
+    inset:0;
+    background:rgba(0,0,0,.6);
     justify-content:center;
     align-items:center;
     z-index:9999;
@@ -164,39 +142,6 @@ body{
     border-radius:15px;
     padding:25px;
     position:relative;
-    box-shadow:0 10px 30px rgba(0,0,0,0.3);
-}
-
-.popup-box h2{
-    text-align:center;
-    margin-bottom:20px;
-}
-
-.popup-box input,
-.popup-box textarea{
-    width:100%;
-    padding:12px;
-    margin:8px 0;
-    border:1px solid #ddd;
-    border-radius:8px;
-    font-size:15px;
-    box-sizing:border-box;
-}
-
-.popup-box textarea{
-    height:80px;
-    resize:none;
-}
-
-#continueBtn{
-    width:100%;
-    padding:12px;
-    background:#ff2d6f;
-    color:#fff;
-    border:none;
-    border-radius:8px;
-    font-size:16px;
-    cursor:pointer;
 }
 
 .close{
@@ -206,72 +151,13 @@ body{
     font-size:28px;
     cursor:pointer;
 }
-    
 
-    .product{
-        width: 100%;
-    }
-
-    .product img{
-        height: 120px;
-    }
-
-    .product h3{
-        font-size: 13px;
-    }
-
-    .product p{
-        font-size: 14px;
-    }
-
-    .cart-btn{
-        font-size: 12px;
-        padding: 8px;
-    }
-}
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
-
-body{
-    width:100%;
-    overflow-x:hidden;
-}
-
-.container{
-    width:100%;
-    max-width:100%;
-}
-
-img{
-    max-width:100%;
-    height:auto;
-}
-
-@media (max-width:768px){
-
-nav{
-    flex-direction:column;
-    gap:10px;
-}
-
-.search-box{
-    width:90%;
-}
-
-.hero{
-    width:100%;
-    padding:30px 15px;
-    text-align:center;
-}
-
- @media (max-width:768px){
+/* Mobile */
+@media(max-width:768px){
 
 .navbar{
     flex-direction:column;
-    gap:10px;
+    gap:12px;
     padding:15px;
 }
 
@@ -280,13 +166,18 @@ nav{
 }
 
 .navbar ul{
-    flex-wrap:wrap;
     justify-content:center;
-    gap:10px;
+    flex-wrap:wrap;
+    gap:15px;
+}
+
+.hero{
+    height:280px;
+    padding:20px;
 }
 
 .hero h1{
-    font-size:36px;
+    font-size:34px;
 }
 
 .hero p{
@@ -305,19 +196,20 @@ nav{
 }
 
 .product img{
-    height:160px;
+    height:140px;
 }
 
 .product h3{
-    font-size:16px;
+    font-size:15px;
 }
 
 .product p{
-    font-size:16px;
+    font-size:18px;
 }
 
 .cart-btn{
     width:90%;
-    font-size:14px;
+    margin:10px auto 15px;
+    display:block;
 }
 }
