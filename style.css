@@ -205,8 +205,7 @@ body{
     top:10px;
     font-size:28px;
     cursor:pointer;
-@media (max-width: 768px) {
-
+}
     .products{
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -282,5 +281,40 @@ nav{
 .card{
     width:90%;
     margin:auto;
+}
+}@media (max-width:768px){
+
+.navbar{
+    flex-direction:column;
+    gap:10px;
+    padding:15px;
+}
+
+.navbar input{
+    width:100%;
+}
+
+.navbar ul{
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:10px;
+}
+
+.hero h1{
+    font-size:36px;
+}
+
+.hero p{
+    font-size:18px;
+}
+
+.products{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:20px;
+}
+
+.product{
+    width:100%;
 }
 }
